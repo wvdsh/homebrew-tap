@@ -1,25 +1,25 @@
 class Wvdsh < Formula
   desc "Cross-platform CLI tool for uploading game projects to wavedash.gg"
   homepage "https://wavedash.gg"
-  version "0.1.35"
+  version "0.1.36"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.35/wvdsh-aarch64-apple-darwin.tar.xz"
-      sha256 "098cc808945e7bb3048a72f14c947886a054d58ec14926f38f2035a3c15edca0"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.36/wvdsh-aarch64-apple-darwin.tar.xz"
+      sha256 "d8813000fc5a34e3e57c8e011428753a085c48b84823964fd0eeb5dea07be71f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.35/wvdsh-x86_64-apple-darwin.tar.xz"
-      sha256 "5274fcd0d767d7e491a5ef308a2e61f9347d6ce892b85f73b17eba97a6c3f1e1"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.36/wvdsh-x86_64-apple-darwin.tar.xz"
+      sha256 "d95365981a034f27f6da675e90e0e9266505eece12cec9b9fa58667ae89d4ee3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.35/wvdsh-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e83607f2db52be607c4b06f01256bca01783571f69abcdb284113c3ab48123dc"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.36/wvdsh-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "dd556ff2d8f3c053575bb3b2b3edda66522c6fc00d084430c79df0cd4dbb6297"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.35/wvdsh-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f02ca4c2446a904ae10df95b23a810408ab2ff0a041f04a91d7e6da349f89eb4"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.36/wvdsh-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "595534fb23bce6fd52d4ed2593d9b1460e361dde7a921c722d3df0b6d1ada5f4"
     end
   end
   license "MIT"
