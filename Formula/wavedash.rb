@@ -1,25 +1,25 @@
 class Wavedash < Formula
-  desc "Cross-platform CLI tool for uploading game projects to wavedash.gg"
-  homepage "https://wavedash.gg"
-  version "0.1.24"
+  desc "Cross-platform CLI tool for uploading game projects to wavedash.com"
+  homepage "https://wavedash.com"
+  version "0.1.54"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wavedash/cli/releases/download/0.1.24/wavedash-aarch64-apple-darwin.tar.xz"
-      sha256 "51e67b1ce92eaf84dfae6595fd58ad8fdb4b17466860ee0010c0579292825f35"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.54/wavedash-aarch64-apple-darwin.tar.xz"
+      sha256 "b1fc3f8aeda8505ef3f1c1963e03f13d1b07e37a45591b2427268800fbca29ee"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wavedash/cli/releases/download/0.1.24/wavedash-x86_64-apple-darwin.tar.xz"
-      sha256 "f1287c18e54c6cc00df6eef2618d696d521dd0e7359134c62d53ace8321a1621"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.54/wavedash-x86_64-apple-darwin.tar.xz"
+      sha256 "a9e2e600067bca70d0ed133171398dc8126130cd44d17dcfb364daad4965a7cd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wavedash/cli/releases/download/0.1.24/wavedash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "28bade5ddb932b659b18389c466803ec2d42805f9b57f07f4e3703238a70a401"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.54/wavedash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c6faa5eea8d00ecef59ae7ee4c46de58073531539cc1c44866a0cd34e25374c2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wavedash/cli/releases/download/0.1.24/wavedash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a03acf274ba040ae96ef4002cee05c960658043c15ae5dc32d5786c870298b61"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.54/wavedash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a69e468d68c5e963edc8c169671b8303ff50d298cbfc13253a1e2afd145304b3"
     end
   end
   license "MIT"
@@ -48,10 +48,10 @@ class Wavedash < Formula
   end
 
   def install
-    bin.install "wvdsh" if OS.mac? && Hardware::CPU.arm?
-    bin.install "wvdsh" if OS.mac? && Hardware::CPU.intel?
-    bin.install "wvdsh" if OS.linux? && Hardware::CPU.arm?
-    bin.install "wvdsh" if OS.linux? && Hardware::CPU.intel?
+    bin.install "wavedash" if OS.mac? && Hardware::CPU.arm?
+    bin.install "wavedash" if OS.mac? && Hardware::CPU.intel?
+    bin.install "wavedash" if OS.linux? && Hardware::CPU.arm?
+    bin.install "wavedash" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
