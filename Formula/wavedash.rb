@@ -1,25 +1,25 @@
 class Wavedash < Formula
   desc "Cross-platform CLI tool for uploading game projects to wavedash.com"
   homepage "https://wavedash.com"
-  version "0.1.92"
+  version "0.1.93"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.92/wavedash-aarch64-apple-darwin.tar.gz"
-      sha256 "01ca9e4ecf83cc6ad2879dba316f0b0f16d075a6bd9dd9458e25de1863e47e83"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.93/wavedash-aarch64-apple-darwin.tar.gz"
+      sha256 "2fc94861c3901a72c046b5139b9c9c570f0e056ca6f19a4e870b75a65f2daf84"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.92/wavedash-x86_64-apple-darwin.tar.gz"
-      sha256 "b6066a7beb2e679f5d15c1c74cc80f6adcb07dd96b935a14a0c28219bf37ff38"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.93/wavedash-x86_64-apple-darwin.tar.gz"
+      sha256 "530e5ed53db8966700fd347a4a0c97f4b7c92a441cdbe913121f74c27422cd9a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.92/wavedash-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4e9b69cdcf9ae9208f53fcd90e8ef3df9556ced53846a5761ab302b112f68bd1"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.93/wavedash-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "27118cad4e6327cba40146bde536f5242fa3ed212006da362ebfe2af22c9c6db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wvdsh/cli/releases/download/0.1.92/wavedash-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c4c42022c4f191868da8c084017a181236df12f81169e0cf16d8ae614a2a359f"
+      url "https://github.com/wvdsh/cli/releases/download/0.1.93/wavedash-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e0e7244968338c56bb48ff9a851f130528c9d15fae08e97ddd645fa2aaa18d7c"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Wavedash < Formula
   end
 
   def install
-    bin.install "wavedash" if OS.mac? && Hardware::CPU.arm?
-    bin.install "wavedash" if OS.mac? && Hardware::CPU.intel?
-    bin.install "wavedash" if OS.linux? && Hardware::CPU.arm?
-    bin.install "wavedash" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "wavedash"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "wavedash"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "wavedash"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "wavedash"
+    end
 
     install_binary_aliases!
 
